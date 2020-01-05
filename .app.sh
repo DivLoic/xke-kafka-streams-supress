@@ -3,59 +3,58 @@
 #doitlive commentecho: true
 #doitlive prompt: {dir.cyan} {user.green} ◒ 🍹 ➜
 
-# # folder creation
+## folder creation
 mkdir window-final-result
 cd window-final-result
-echo "*/.idea/" >> ../.gitignore && git add ../.gitignore
-# # docker compose file creation
+## docker compose file creation
 vi docker-compose.yml
 
-# # [Slides 📊] Docker Compose Services
-# # Lift off !!! 🚀
+## [Slides 📊] Docker Compose Services
+## Lift off !!! 🚀
 docker-compose up -d
-# # are our services really alive? 🤔
+## are our services really alive? 🤔
 docker-compose ps
 
-# # build setup
+## build setup
 vi build.gradle
 vi settings.gradle
 
-# # [Slides 📊] Gradle Build Custom task
+## [Slides 📊] Gradle Build Custom task
 gradle wrapper
 
-# # Resources: log and app configuration
+## Resources: log and app configuration
 mkdir -p src/main/resources
 vi src/main/resources/application.conf
-# # do not forget to change *window.grace.period*
+## do not forget to change *window.grace.period*
 vi src/main/resources/logback.xml
 
 idea .
 
-# # Schema creation
+## Schema creation
 mkdir -p src/main/avro
-# # [Slides 📊] PressureAlert Schema
+## [Slides 📊] PressureAlert Schema
 vi src/main/avro/pressure-alert.avsc
 
-# # I should issue a gradle build but...
+## I should issue a gradle build but...
 ./gradlew generateAvroJava
 tree 3 ./build
 
-# # Some of the tasks required are note part of the application
+## Some of the tasks required are note part of the application
 mkdir -p src/main/java/io/confluent/developer/helper
 
-# # 1. Topics creation
+## 1. Topics creation
 vi src/main/java/io/confluent/developer/helper/TopicCreation.java
 
-# # 2. Schema publication
+## 2. Schema publication
 vi src/main/java/io/confluent/developer/helper/SchemaPublication.java
 
-# # [🔥👨🏾‍💻🔥] Finally, it's time to write the app [🔥👨🏾‍💻🔥]
+## [🔥👨🏾‍💻🔥] Finally, it's time to write the app [🔥👨🏾‍💻🔥]
 tree 2 src
-# # We are working on time based operation, we need to extract the event time
+## We are working on time based operation, we need to extract the event time
 vi src/main/java/io/confluent/developer/PressureDatetimeExtractor.java
 
-# # And now 🥁🥁🥁... the main class!
+## And now 🥁🥁🥁... the main class!
 vi src/main/java/io/confluent/developer/WindowFinalResult.java
 
-# # - 🤖 Let's run the Kafka Streams application
+## - 🤖 Let's run the Kafka Streams application
 ./gradlew run
