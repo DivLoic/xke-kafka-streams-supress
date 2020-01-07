@@ -2,6 +2,8 @@
 #doitlive shell: /bin/zsh
 #doitlive commentecho: true
 #doitlive prompt: {dir.cyan} {user.green} ◒ 🍹 ➜
+#doitlive alias: whatnext="/Users/loicmdivad/.iterm2/imgcat ../.images/wherearethetests.png"
+
 
 ## folder creation
 mkdir window-final-result
@@ -50,11 +52,17 @@ vi src/main/java/io/confluent/developer/helper/SchemaPublication.java
 
 ## [🔥👨🏾‍💻🔥] Finally, it's time to write the app [🔥👨🏾‍💻🔥]
 tree 2 src
+
 ## We are working on time based operation, we need to extract the event time
 vi src/main/java/io/confluent/developer/PressureDatetimeExtractor.java
+## [Slides 📊] PressureDatetimeExtractor Code Detail
 
 ## And now 🥁🥁🥁... the main class!
 vi src/main/java/io/confluent/developer/WindowFinalResult.java
+## [Slides 📊] WindowFinalResult Code Detail
 
+tree 1 src/main/java/io/confluent/developer/
 ## - 🤖 Let's run the Kafka Streams application
 ./gradlew run
+
+whatnext
