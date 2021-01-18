@@ -1,4 +1,4 @@
-#doitlive speed: 1
+#doitlive speed: 4
 #doitlive shell: /bin/zsh
 #doitlive commentecho: true
 #doitlive prompt: {dir.cyan} {user.green} ◒ 🍹 ➜

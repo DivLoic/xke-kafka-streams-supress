@@ -38,6 +38,7 @@ vi src/main/avro/pressure-alert.avsc
 
 # #I should issue a gradle build but...
 ./gradlew generateAvroJava
+# #Let's have a look at the generated classes
 tree 3 ./build
 
 # #Some of the tasks required are note part of the application
