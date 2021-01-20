@@ -1,4 +1,4 @@
-#doitlive speed: 1
+#doitlive speed: 2
 #doitlive shell: /bin/zsh
 #doitlive commentecho: true
 #doitlive prompt: {dir.cyan} {user.green} ◒ 🍹 ➜
@@ -44,13 +44,9 @@ tree 3 ./build
 # #Some of the tasks required are note part of the application
 mkdir -p src/main/java/io/confluent/developer/helper
 
-# #1. Topics creation
-vi src/main/java/io/confluent/developer/helper/TopicCreation.java
+bash ../.download_helpers.sh
 
-# #2. Schema publication
-vi src/main/java/io/confluent/developer/helper/SchemaPublication.java
-
-# #🔥👨🏾‍💻 Finally, it's time to write the app!
+# #Let's see the new Gradle tasks!
 tree 2 src
 
 # #We are working on time based operation, we need to extract the event time
