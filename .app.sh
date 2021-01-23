@@ -2,7 +2,7 @@
 #doitlive shell: /bin/zsh
 #doitlive commentecho: true
 #doitlive prompt: {dir.cyan} {user.green} ◒ 🍹 ➜
-#doitlive alias: whatnext="/Users/loicmdivad/.iterm2/imgcat ../.images/wherearethetests.png"
+#doitlive alias: conclusion="/Users/loicd/.iterm2/imgcat ../.images/final-gif.gif"
 
 # #folder creation
 mkdir window-final-result
@@ -22,12 +22,14 @@ vi settings.gradle
 # #[Slides 📊] Gradle Build details
 gradle wrapper
 
-# #Resources: log and app config (⚠️ change *window.grace.period*)
+
+# #Let's create the application resources
 mkdir -p src/main/resources
 vi src/main/resources/application.conf
 vi src/main/resources/logback.xml
 
 # #Let see what we have so far
+# #Resources: log and app config (⚠️ change *window.grace.period*)
 idea .
 
 # #Schema creation
@@ -61,4 +63,14 @@ tree 1 src/main/java/io/confluent/developer/
 # #🤖 Let's run the Kafka Streams application
 ./gradlew run
 
-whatnext
+cd window-final-result
+conclusion
+# # __       __                                __
+# # |  \     /  \                              |  \
+# # | $$\   /  $$  ______    ______    _______  \$$
+# # | $$$\ /  $$$ /      \  /      \  /       \|  \
+# # | $$$$\  $$$$|  $$$$$$\|  $$$$$$\|  $$$$$$$| $$
+# # | $$\$$ $$ $$| $$    $$| $$   \$$| $$      | $$
+# # | $$ \$$$| $$| $$$$$$$$| $$      | $$_____ | $$
+# # | $$  \$ | $$ \$$     \| $$       \$$     \| $$
+# #  \$$      \$$  \$$$$$$$ \$$        \$$$$$$$ \$$ (Thank you!)
