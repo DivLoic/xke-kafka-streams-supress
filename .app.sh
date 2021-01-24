@@ -2,7 +2,8 @@
 #doitlive shell: /bin/zsh
 #doitlive commentecho: true
 #doitlive prompt: {dir.cyan} {user.green} ◒ 🍹 ➜
-#doitlive alias: conclusion="/Users/loicd/.iterm2/imgcat ../.images/final-gif.gif"
+#doitlive alias: buildtool="/usr/local/bin/imgcat ../.images/build-tool.gif -w 70--no-resize"
+#doitlive alias: conclusion="/usr/local/bin/imgcat ../.images/final-gif.gif -w 100--no-resize"
 
 # #folder creation
 mkdir window-final-result
@@ -15,6 +16,7 @@ docker-compose up -d
 # #Are our services really alive? 🤔
 docker-compose ps
 
+buildtool
 # #Gradle build configuration
 vi build.gradle
 vi settings.gradle
