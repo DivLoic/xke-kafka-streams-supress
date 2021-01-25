@@ -2,8 +2,10 @@
 #doitlive shell: /bin/zsh
 #doitlive commentecho: true
 #doitlive prompt: {dir.cyan} {user.green} ◒ 🍹 ➜
-#doitlive alias: buildtool="/usr/local/bin/imgcat ../.images/build-tool.gif -w 70--no-resize"
-#doitlive alias: conclusion="/usr/local/bin/imgcat ../.images/final-gif.gif -w 100--no-resize"
+#doitlive alias: helper="bash ../.download_helpers.sh"
+#doitlive alias: buildtool="/usr/local/bin/imgcat ../.images/buid-tool.gif -w 50--no-resize"
+#doitlive alias: mainapp="/usr/local/bin/imgcat ../.images/bobapp.gif -w 50--no-resize"
+#doitlive alias: conclusion="/usr/local/bin/imgcat ../.images/final-gif.gif -w 70--no-resize"
 
 # #folder creation
 mkdir window-final-result
@@ -23,7 +25,6 @@ vi settings.gradle
 
 # #[Slides 📊] Gradle Build details
 gradle wrapper
-
 
 # #Let's create the application resources
 mkdir -p src/main/resources
@@ -45,13 +46,10 @@ vi src/main/avro/pressure-alert.avsc
 # #Let's have a look at the generated classes
 tree 3 ./build
 
-# #Some of the tasks required are note part of the application
-mkdir -p src/main/java/io/confluent/developer/helper
+helper
 
-bash ../.download_helpers.sh
-
-# #Let's see the new Gradle tasks!
-tree 2 src
+# #time to write the app itself
+mainapp
 
 # #We are working on time based operation, we need to extract the event time
 vi src/main/java/io/confluent/developer/PressureDatetimeExtractor.java
@@ -65,7 +63,6 @@ tree 1 src/main/java/io/confluent/developer/
 # #🤖 Let's run the Kafka Streams application
 ./gradlew run
 
-cd window-final-result
 conclusion
 # # __       __                                __
 # # |  \     /  \                              |  \
